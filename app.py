@@ -19,7 +19,7 @@ import base64
 # === Settings ===
 MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
-RELEASEVERSION = "OB51"
+RELEASEVERSION = "OB52"
 USERAGENT = "Dalvik/2.1.0 (Linux; U; Android 7.1.2; ASUS_Z01QD Build/QKQ1.190825.002)"
 SUPPORTED_REGIONS = {"PK", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "IND", "CIS", "BD", "EU"}
 MAX_RETRIES = 3  # Maximum number of retries for API requests
@@ -235,7 +235,7 @@ async def create_jwt(region: str):
             uid = parts[0].split('=')[1]
             password = parts[1].split('=')[1]
 
-            url = f"https://jwt.tsunstudio.pw/v1/auth/saeed?uid={uid}&password={password}"
+            url = f"https://api-jwt-v2.vercel.app/token?uid={uid}&password={password}"
 
             async def fetch_jwt():
                 async with httpx.AsyncClient(verify=False, timeout=60.0) as client:
