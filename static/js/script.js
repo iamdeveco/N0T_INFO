@@ -256,7 +256,7 @@ function renderAccountInfo(data, uid) {
     // Outfit Image
     outfitContent.innerHTML = `
         <div class="outfit-container">
-            <img src="https://danger-info-alpha.vercel.app/outfit-image?uid=${uid}&key=DANGERxINFO&bg=3" 
+            <img src="https://codex-outfit-api-1.vercel.app/outfit-image?uid=${uid}&key=HasibCodex" 
             alt="Character Outfit" 
                  class="outfit-image"
                  onerror="this.parentElement.innerHTML='<div style=\'padding:20px;text-align:center;color:var(--error)\'>Outfit Hidden</div>'">
